@@ -10,7 +10,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect('mongodb+srv://admin-vanak:pnvow4NknrGyPDQI@cluster0-gah1v.mongodb.net/todolistDB', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+const password = "";
+mongoose.connect('mongodb+srv://admin-vanak:'+ password +'@cluster0-gah1v.mongodb.net/todolistDB', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
     .then(() => console.log('MongoDB Connected...'))
     .catch((err) => console.log(err))
 
